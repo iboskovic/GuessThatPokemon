@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <title>Pokedex</title>
+</head>
+<body>
+    <!--    Open wrapper    -->
+    <div class="wrapper">
+        <div class="wrapper__title">GUESS THAT POKEMON!</div>
+        <div class="wrapper__profile">
+            <img id="pokemon" class="wrapper__profile__pic"></img>
+        </div>
+        <div class="wrapper__label" id="guess">
+            <input type="text" class="wrapper__label__input" id="input">
+            <button class="wrapper__label__button">GUESS</button>
+        </div>
+        <div class="wrapper__pokedexbtn">
+            <button class="wrapper__pokedexbtn__btn" id="btn">MY POKEDEX</button>
+        </div>
+        <div class="wrapper__progress">
+            <div class="wrapper__progress__bar" id="progress" value="0" max="151"><span id="pokemonCcount">0</span>/151</div>
+            
+        </div>
+    </div>
+    <!--    Close wrapper    -->
+
+    <!--    Open modal  -->
+    <div class="modal">
+        <button class="modal-close">
+            <svg class="svg-icon" viewBox="0 0 20 20">
+                <path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+            </svg>
+        </button>
+        <div class="modal__left">
+            <div class="modal__left__title">My Pokedex</div>
+            <div class="modal__left__counter">(<span id="pokemonCount">0</span>/151)</div>
+            <ol class="modal__left__pokedex" id="pokedex"></ol>
+        </div>
+        <div class="modal__right" id="right">
+           <div class="modal__right__img">
+                <img id="pokemon" class="modal__right__img__image"></img>
+                <p class="modal__right__img__mark">?</p>
+            </div>
+                <div class="modal__right__info">
+                    <div class="modal__right__info__id">#</div>
+                    <span class="modal__right__info__name">NAME</span>
+                    <div class="modal__right__info__hp">HP<span class="modal__right__info__number hp">??</span></div>
+                    <div class="modal__right__info__speed">SPEED<span class="modal__right__info__number speed">??</span></div>
+                    <div class="modal__right__info__attack">ATTACK<span class="modal__right__info__number attack">??</span></div>
+                    <div class="modal__right__info__defense">DEFENSE<span class="modal__right__info__number defense">??</span></div>
+                </div>
+            
+        </div>
+    </div>
+    <!--    Close modal  -->
+    <script src="index.js"></script>
+   <!-- <script src="modal.js"></script>-->
+</body>
+</html>

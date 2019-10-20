@@ -1,0 +1,352 @@
+body {
+  background-image: url(images/background.png);
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  height: 480px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wrapper__title {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper__profile {
+  background-color: #c9c6c5;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.wrapper__profile__pic {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100px;
+}
+
+.wrapper__label {
+  width: 80%;
+  position: relative;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper__label__input {
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #c9c6c5;
+  float: left;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+.wrapper__label__button {
+  float: left;
+  width: 30%;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+  border: 1px solid #c9c6c5;
+  background-color: #c9c6c5;
+  border-left: none;
+  cursor: pointer;
+}
+
+.wrapper__label__button:hover {
+  background-color: #aba8a7;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.wrapper__pokedexbtn {
+  width: 80%;
+  margin: auto;
+}
+
+.wrapper__pokedexbtn__btn {
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+  background-color: #c9c6c5;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper__pokedexbtn__btn:hover {
+  background-color: #aba8a7;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.wrapper__progress {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  background-color: #c9c6c5;
+  /* &__bar {
+            width: 100%;
+            margin: auto;
+            margin-top: 8px;
+            color: #fff;
+            font-family: $roboto;
+            background-color: #6e6e6e;
+        }*/
+}
+
+.modal {
+  margin: auto;
+  background-color: #fff;
+  width: 800px;
+  height: 480px;
+  display: inline-block;
+  position: fixed;
+  z-index: 10;
+  bottom: 1em;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  -webkit-box-shadow: 0 0 0 35em rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 0 35em rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__left {
+  background-color: #fff;
+  float: left;
+  height: 100%;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+.modal__left__title {
+  display: inline-block;
+  margin: 15px 15px;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal__left__counter {
+  display: inline-block;
+  font-size: 22px;
+  color: #a19f9f;
+}
+
+.modal__right {
+  float: right;
+  background-color: #fff;
+  height: 100%;
+  width: 50%;
+}
+
+.modal__right__img {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+.modal__right__img__image {
+  background-color: #c9c6c5;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modal__right__img__mark {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  margin-top: -160px;
+}
+
+.modal__right__info {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.modal__right__info__id {
+  display: inline-block;
+  font-size: 22px;
+  color: #a19f9f;
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.modal__right__info__name {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modal__right__info__hp {
+  border: 2px solid #aba8a7;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  text-align: left;
+  font-size: 15px;
+}
+
+.modal__right__info__speed {
+  border: 2px solid #aba8a7;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  text-align: left;
+  font-size: 15px;
+  padding-top: 12px;
+}
+
+.modal__right__info__attack {
+  border: 2px solid #aba8a7;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  text-align: left;
+  font-size: 15px;
+  padding-top: 12px;
+}
+
+.modal__right__info__defense {
+  border: 2px solid #aba8a7;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  text-align: left;
+  font-size: 15px;
+  padding-top: 12px;
+}
+
+.modal__right__info__number {
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.pokeprofile {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+}
+
+.pokeprofile__image {
+  margin: 0 10px;
+  width: 75px;
+  height: 75px;
+  background-color: #c9c6c5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#pokedex {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-row-gap: 40px;
+}
+
+/* Modal close button  */
+.modal-close {
+  background: #000;
+  margin-top: -15px;
+  margin-left: 785px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  outline: 0;
+}
+
+/* SVG Style  */
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+@-webkit-keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
